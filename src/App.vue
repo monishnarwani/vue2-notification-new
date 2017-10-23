@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <div class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <notification
+              type="success"
+              message="Cupiditate excepteur pariatur perferendis occaecat quod, placerat nam maiores nostrud dicta voluptatum fuga numquam accusantium atque officia adipiscing repellat per suspendisse, accumsan metus?"
+              :duration="1000"
+            ></notification>
+          </div>
+
+          <div class="column is-one-quarter">
+            <notification
+              type="warning"
+              message="Cupiditate excepteur pariatur perferendis occaecat quod, placerat nam maiores nostrud dicta voluptatum fuga numquam accusantium atque officia adipiscing repellat per suspendisse, accumsan metus?"
+              :duration="2000"
+            ></notification>
+          </div>
+
+          <div class="column is-one-quarter">
+            <notification
+              type="danger"
+              message="Cupiditate excepteur pariatur perferendis occaecat quod, placerat nam maiores nostrud dicta voluptatum fuga numquam accusantium atque officia adipiscing repellat per suspendisse, accumsan metus?"
+              :duration="3000"
+            ></notification>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
+import Notification from './components/Notification.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Notification
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import "~bulma/bulma.sass"
 </style>
