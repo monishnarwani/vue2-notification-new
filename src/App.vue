@@ -7,7 +7,6 @@
             <notification
               type="success"
               message="Cupiditate excepteur pariatur perferendis occaecat quod, placerat nam maiores nostrud dicta voluptatum fuga numquam accusantium atque officia adipiscing repellat per suspendisse, accumsan metus?"
-              :duration="1000"
             ></notification>
           </div>
 

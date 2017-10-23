@@ -2,7 +2,7 @@
     <transition name="slide-fade">
       <div class="notification" :class="notificationClass" v-show="showMsg">
         <button class="delete"></button>
-        <span>{{message}}</span>
+        <span class="message">{{message}}</span>
       </div>
     </transition>
 </template>
