@@ -1,5 +1,7 @@
 # vue-notification
+
 # Still Under Development
+
 > A Vue.js project
 
 ## Build Setup
