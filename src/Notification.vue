@@ -1,7 +1,7 @@
 <template>
     <transition name="slide-fade">
-      <div class="notification" :class="notificationClass" v-show="showMsg">
-        <button class="delete"></button>
+      <div class="notification" :class="notificationClass" v-if="showMsg">
+        <button class="delete" @click.stop.prevent="closePressed"></button>
         <span class="message">{{message}}</span>
       </div>
     </transition>
@@ -38,6 +38,9 @@
       }
     },
     methods: {
+      closePressed () {
+
+      },
       setNotificationType () {
         if (this.type != null) {
           switch (this.type) {
@@ -69,15 +72,5 @@
 </script>
 
 <style scoped>
-    .slide-fade-enter-active {
-        transition: all .5s ease;
-    }
-    .slide-fade-leave-active {
-        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-    }
-    .slide-fade-enter, .slide-fade-leave-to
-        /* .slide-fade-leave-active below version 2.1.8 */ {
-        transform: translateX(10px);
-        opacity: 0;
-    }
+    @import "notification.css";
 </style>

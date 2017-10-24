@@ -1,7 +1,7 @@
 {
   "name": "vue2-notification-new",
-  "version": "1.0.13",
-  "description": "A Vue.js package build on top of bulma css to ease notification process",
+  "version": "1.0.15",
+  "description": "A Vue.js package build to ease notification process",
   "author": "Monish <monish.narwani@focalworks.in>",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -12,7 +12,6 @@
     "test": "npm run unit"
   },
   "dependencies": {
-    "bulma": "^0.6.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
@@ -34,8 +33,7 @@
   "keywords": [
     "vue",
     "notification",
-    "vue-notification",
-    "bulma"
+    "vue-notification"
   ],
   "main": "src/Notificaiton.vue"
 
