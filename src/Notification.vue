@@ -1,9 +1,9 @@
 <template>
     <transition name="slide-fade">
-      <div class="notification" :class="notificationClass" v-if="showMsg">
-        <button class="delete" @click.stop.prevent="closePressed"></button>
-        <span class="message">{{message}}</span>
-      </div>
+        <div class="notification" :class="notificationClass" v-if="showMsg">
+            <button class="delete" @click.stop.prevent="closePressed"></button>
+            <span class="message">{{message}}</span>
+        </div>
     </transition>
 </template>
 
@@ -39,7 +39,8 @@
     },
     methods: {
       closePressed () {
-
+        this.showMsg = false
+        this.$emit('notification-closed')
       },
       setNotificationType () {
         if (this.type != null) {
