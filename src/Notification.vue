@@ -69,7 +69,6 @@
 </script>
 
 <style scoped>
-    @import '~bulma/css/bulma.css';
     .slide-fade-enter-active {
         transition: all .5s ease;
     }
