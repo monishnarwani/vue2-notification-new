@@ -8,7 +8,7 @@
     "start": "npm run dev",
     "build": "node build/build.js",
     "unit": "mocha-webpack --webpack-config test/webpack.config.js --require test/setup.js test/specs/*.spec.js",
-    "watch": "mocha-webpack --webpack-config test/unit/webpack.config.js --require test/unit/setup.js test/unit/specs/*.spec.js --watch",
+    "watch": "mocha-webpack --webpack-config test/webpack.config.js --watch --require test/setup.js test/specs/*.spec.js",
     "test": "npm run unit"
   },
   "dependencies": {
