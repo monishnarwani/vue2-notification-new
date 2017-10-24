@@ -27,7 +27,7 @@
       }
     },
     mounted () {
-      if (this.duration != null) {
+      if (this.duration !== null) {
         this.showMsg = true
         setTimeout( () => {
           this.showMsg = false
@@ -45,7 +45,7 @@
         this.$emit('notification-closed')
       },
       setNotificationType () {
-        if (this.type != null) {
+        if (this.type !== null) {
           switch (this.type) {
             case 'primary':
               this.notificationClass = 'is-primary'
