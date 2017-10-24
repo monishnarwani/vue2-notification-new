@@ -68,10 +68,8 @@
   }
 </script>
 
-<style scoped lang="sass">
-    @import "~bulma"
-</style>
 <style scoped>
+    @import '~bulma/css/bulma.css';
     .slide-fade-enter-active {
         transition: all .5s ease;
     }
