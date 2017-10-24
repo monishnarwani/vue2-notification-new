@@ -2,7 +2,9 @@
     <transition name="slide-fade">
         <div class="notification" :class="notificationClass" v-if="showMsg">
             <button class="delete" @click.stop.prevent="closePressed"></button>
-            <span class="message">{{message}}</span>
+            <slot>
+                <span class="message">{{message}}</span>
+            </slot>
         </div>
     </transition>
 </template>
