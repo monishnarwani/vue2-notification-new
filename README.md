@@ -1,29 +1,83 @@
-# vue-notification
+# Vue2-notification-new
+_____
 
-# Still Under Development
+## Installation:
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+#### Using NPM:
+```js
+npm install vue2-notification-new --save
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### Using Yarn:
+```js
+yarn add vue2-notification-new
+```
+
+## Props:
+
+| Props Name | Type | Options |
+| ---------- | ---- | ------- |
+| type | String | Primary, Warning, Danger, Success, Info
+| duration | Number | value in MilliSeconds
+
+## Events Fired: 
+| Event Name | Comments |
+| ---------- | ------- |
+| notification-closed | Event fired if notification is explicitly closed by user |
+
+
+
+
+## Basic Usage:
+
+### Template
+
+```js
+<notification type="danger" @notification-closed="closed">
+    <img src="./assets/logo.png" alt="">
+    <span>Lacus pulvinar veniam illum voluptates inceptos exercitation laoreet accumsan? Ullamco.</span>
+</notification>
+```
+
+### Script
+```js
+import Notification from 'vue2-notification-new'
+
+export default {
+    components: {
+        Notification
+    },
+    methods: {
+        closed () {
+            console.log('Notification was closed explicitly')
+        }
+    }
+}
+```
+
+## Setting Notification Duration:
+
+### Template
+
+```js
+<notification type="danger" :duration="5000" @notification-closed="closed"> //Notification will disappears after 5sec
+    <img src="./assets/logo.png" alt="">
+    <span>Lacus pulvinar veniam illum voluptates inceptos exercitation laoreet accumsan? Ullamco.</span>
+</notification>
+```
+
+### Script
+```js
+import Notification from 'vue2-notification-new'
+
+export default {
+    components: {
+        Notification
+    },
+    methods: {
+        closed () {
+            console.log('Notification was closed explicitly')
+        }
+    }
+}
+```
